@@ -32,6 +32,7 @@ body{
     padding: 0px 10px;
     margin: 0 auto;
     position: relative;
+    overflow-x: hidden;
 }
 
 .section-top{
@@ -52,7 +53,11 @@ body{
     position: absolute;
     bottom: 0;
     left: 0;
-    z-index: 10;
+    z-index: 1;
+}
+
+.section-trips .section__content{
+    padding: 60px 240px;
 }
 
 .menu__list{
@@ -387,9 +392,9 @@ body{
     }
 }   
 
-@media(max-width: 1064px){
-    .section__content{
-       padding: 0;
+@media(max-width: 1346px){
+    .section-trips .section__content{
+        padding: 60px 0px;
     }
 }
 
@@ -402,5 +407,276 @@ body{
 @media(max-width: 685px){
     .trips__list-item-preview__list-item-info{
         left: 0;
+    }
+}
+
+@media(max-width: 785px){
+    .section-about .section__content{
+        padding: 60px 0px;
+    }
+
+    .socials__list{
+        top: 600px;
+    }
+}   
+
+.main{
+    position: relative;
+}
+
+.main::before{
+    content: '';
+    position: absolute;
+    top: -85px;
+    left: 0;
+    width: 100%;
+    height: 2963px;
+    background: url(../assets/images/bg-lights.png);
+    background-size: cover;
+}
+
+/* .main::after{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 377px;
+    background: url(../assets/images/gradient.png);
+    background-size: cover;
+} */
+
+.section-about{
+    margin-top: 210px;
+}
+
+.section-about-subtitle{
+    margin-top: 22px;
+    font-family: 'Larsseit';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+}
+
+.section-about-descr{
+    margin-top: 20px;
+    font-family: 'Larsseit';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+    max-width: 320px;
+}
+
+.section-about-link{
+    margin-top: 38px;
+    padding: 19px 47px;
+    display: inline-block;
+    font-family: 'Larsseit';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 190%;
+    letter-spacing: 0.15em;
+    color: #FFFFFF;
+    background: #00C9E0;
+    box-shadow: 5px 15px 40px rgba(0, 201, 224, 0.2);
+    border-radius: 183px;
+}
+
+.teammates__list{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.teammates__list::before{
+    content: '';
+    position: absolute;
+    top: 200;
+    right: -80px;
+    width: 70px;
+    height: 470px;
+    background: url(../assets/images/gallery-dots.svg);
+    background-size: contain;
+}
+
+.section-about .section__content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-about__text{
+    max-width: 321px;  
+    width: 100%; 
+}
+
+.teammates__list-item{
+    position: relative;
+}
+
+.teammates__list-item:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.4s;
+}
+
+.teammates__list-item-info{
+    position: absolute;
+    top: 70%;
+    left: -10%;
+    font-family: 'Larsseit';
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 150%;
+    letter-spacing: 0.05em;
+    color: #000000;
+    display: inline-block;
+    padding: 26px 19px;
+    background: #fff;
+    border-radius: 8px;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.teammates__list-item:hover .teammates__list-item-info{
+    opacity: 1; 
+}
+
+.teammates__list-item:hover::before {
+    opacity: 0; 
+}
+
+.teammates__list-item-info span{
+    color: #41EAD4;
+}
+
+@media(max-width: 1625px){
+    .section-about .section__content{
+       flex-direction: column;
+    }
+
+    .section-about__text{
+        margin: 0 auto; 
+        text-align: center;
+    }
+
+    .teammates__list{
+        justify-content: center;
+        margin-top: 40px;
+    }
+}
+
+.section-reviews-sibtitle{
+    font-family: 'Larsseit';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.15em;
+    color: #FFFFFF;
+    margin-top: 30px;
+}
+
+.section-reviews__header{
+    text-align: center;
+}
+
+.section-reviews{
+    margin-top: 275px;
+}
+
+.section-reviews__content{
+    background: #011627;
+    box-shadow: 0px 20px 30px rgba(0, 201, 224, 0.03);
+    border-radius: 5px;
+    padding: 100px 0px;
+}
+
+.reviews__list-item{
+    max-width: 510px;
+    min-height: 505px;
+    background: #02223B;
+    box-shadow: 0px 20px 30px rgba(0, 201, 224, 0.03);
+    border-radius: 5px;
+    padding: 75px 74px 75px 104px;
+    margin-left: 24px;
+    margin-top: 24px;
+}
+
+.reviews__list{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1070px;
+    margin: 0 auto; 
+    margin-top: 49px;
+    transform: translateX(-12px);
+}
+
+.reviews__list-item-title{
+    font-family: 'Larsseit';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 190%;
+    color: #FFFFFF;
+    position: relative;
+}
+
+.reviews__list-item-title::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 32px;
+    height: 35px;
+    background: url(../assets/images/review-dec.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.reviews__list-item-text{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 190%;
+    color: #FFFFFF;
+    margin-top: 15px;
+}
+
+.reviews__list-item-author{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.reviews__list-item-author-name, .reviews__list-item-author-profession{
+    font-family: 'Larsseit';
+    font-weight: 700;
+    font-size: 12px;    
+    line-height: 170%;
+    letter-spacing: 0.15em;
+    color: #FFFFFF;
+}
+
+.reviews__list-item-author-info{
+    margin-left: 12px;
+}
+
+@media(max-width: 1087px){
+    .reviews__list{
+        width: auto;
+        justify-content: center;
+        margin-left: -24px;
+        transform: translateX(0px);
     }
 }
